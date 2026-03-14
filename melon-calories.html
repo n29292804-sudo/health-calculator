@@ -1,1 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
 
+<header>Фруктовый калькулятор калорий</header>
+
+<nav>
+    <a href="banana-calories.html">Банан</a> |
+    <a href="pear-calories.html">Груша</a> |
+    <a href="watermelon-calories.html">Арбуз</a> |
+    <a href="kiwi-calories.html">Киви</a> |
+    <a href="peach-calories.html">Персик</a> |
+    <a href="orange-calories.html">Апельсин</a> |
+    <a href="plum-calories.html">Слива</a> |
+    <a href="apple-calories.html">Яблоко</a> |
+</nav>
+
+<title>Калькулятор калорий дыни</title>
+
+<style>
+
+body{
+font-family:Arial;
+background-image:url(1melon.jpg);
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+
+header{
+background:#2c7be5;
+color:white;
+padding:20px;
+text-align:center;
+font-size:24px;
+}
+
+nav{
+background:#ffffff;
+padding:10px;
+text-align:center;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a{
+margin:10px;
+text-decoration:none;
+color:#2c7be5;
+font-weight:bold;
+}
+
+.container{
+width:400px;
+margin:50px auto;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+</style>    
+
+<title>Калькулятор калорий дыни</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    background-color:#f3f6fb;
+}
+
+.container{
+    width:400px;
+    margin:100px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+h1{
+    color:#2c7be5;
+}
+
+input{
+    padding:10px;
+    width:80%;
+    margin:10px;
+    font-size:16px;
+}
+
+button{
+    padding:10px 20px;
+    background:#2c7be5;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1a5dc9;
+}
+
+.result{
+    margin-top:20px;
+    font-size:20px;
+    color:#28a745;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Калькулятор калорий дыни</h1>
+
+<p>Введите вес дыни в граммах</p>
+
+<input type="number" id="weight" placeholder="например 120">
+
+<br>
+
+<button onclick="calculate()">Рассчитать</button>
+
+<div class="result" id="result"></div>
+
+<p style="margin-top:30px;">
+Дыня содержит примерно <b>34 ккал на 100 г</b>.
+Дыня улучшает пищеварение, укрепляет иммунитет, сердце и сосуды.
+</p>
+
+</div>
+
+<script>
+
+function calculate(){
+
+let weight = document.getElementById("weight").value;
+
+let calories = weight * 34 / 100;
+
+document.getElementById("result").innerText =
+"Калории: " + calories.toFixed(1) + " ккал";
+
+}
+
+</script>
+
+</body>
+</html>
