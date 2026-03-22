@@ -1,6 +1,6 @@
 const products = [
   {name: "банан", link: "banan.html"},
-  {name: "яблоко", link: "apple.html"},
+  {name: "яблоко", link: "index.html"},
   {name: "груша", link: "pear.html"},
   {name: "апельсин", link: "orange.html"},
   {name: "киви", link: "kiwi.html"},
