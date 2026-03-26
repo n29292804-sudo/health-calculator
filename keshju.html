@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- Заголовок калькулятора с цветной полосой -->
+<div style="
+    background-color: #4ce621; 
+    padding: 10px 0;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+">
+    <h2 style="
+        font-size: 32px;
+        color: white;
+        -webkit-text-stroke: 1px black; /* обводка */
+        margin: 0;
+    ">
+        Калькулятор калорий продуктов
+    </h2>
+</div>
+
+<nav>
+    <a href="mandle.html">Миндаль</a> |
+    <a href="oreh.html">Грецкий орех</a> |
+    <a href="semecky.html">Семечки подсолнуха</a> |
+    <a href="tykvenyesemecky.html">Тыквенные семечки</a> |
+     <a href="funduk.html">Фундук</a>
+</nav>
+
+<div style="display:flex; align-items:center; justify-content:center; gap:20px; position:relative; margin-top:15px;">
+
+    <!-- Поиск продукта по центру -->
+<input type="text" id="searchInput" placeholder="Поиск..." autocomplete="off" spellcheck="false" style="
+        width:200px;
+        padding:5px 10px;
+        text-align:center; 
+        border:2px solid black;
+        border-radius:5px;
+        font-size:16px;
+    ">
+    
+    <!-- Контейнер для результатов поиска -->
+    <div id="searchResults" class="results"></div>
+</div>
+
+<script>
+document.getElementById("searchBox").addEventListener("keypress", function(e){
+    if(e.key === "Enter"){
+        searchProducts();
+    }
+});
+</script>
+
+<style>
+#menuCategories div {
+  padding: 5px;
+  cursor: pointer;
+}
+
+#menuCategories div:hover {
+  background-color: #f0f0f0;
+}
+
+#searchResults {
+  border: 2px solid black;
+  max-height: 200px;
+  overflow-y: auto;
+  position: absolute;
+  background: white;
+  width: 200px;
+  display: none;
+  z-index: 10;
+  left: calc(50% - 100px); /* по центру относительно поля поиска */
+}
+
+#searchResults div {
+  padding: 5px;
+  cursor: pointer;
+}
+
+#searchResults div:hover {
+  background-color: #f0f0f0;
+}
+</style>
+
+<script>
+const menuButton = document.getElementById("menuButton");
+const menuCategories = document.getElementById("menuCategories");
+
+
+// Поиск продуктов
+input.addEventListener("input", function() {
+    const value = this.value.toLowerCase();
+    results.innerHTML = "";
+
+    if(value === "") {
+        results.style.display = "none";
+        return;
+    }
+
+    const filtered = products.filter(p => p.name.toLowerCase() === value); 
+
+    filtered.forEach(p => {
+        const div = document.createElement("div");
+        div.textContent = p.name;
+        div.addEventListener("click", () => {
+            input.value = p.name;
+            results.style.display = "none";
+        });
+        results.appendChild(div);
+    });
+
+    results.style.display = filtered.length ? "block" : "none";
+});
+</script>
+
+<script src="products.js"></script>
+
+<script>
+const input = document.getElementById("searchInput");
+const results = document.getElementById("searchResults");
+
+input.addEventListener("input", function() {
+    const value = this.value.toLowerCase();
+    results.innerHTML = "";
+
+    if(value === "") {
+        results.style.display = "none";
+        return;
+    }
+
+    const filtered = products.filter(p =>
+        p.name.toLowerCase().includes(value)
+    );
+
+    filtered.forEach(p => {
+        const div = document.createElement("div");
+        div.textContent = p.name;
+        div.style.cursor = "pointer";
+
+        div.addEventListener("click", () => {
+            window.location.href = p.link; // ВАЖНО: link, не url
+        });
+
+        results.appendChild(div);
+    });
+
+    results.style.display = filtered.length ? "block" : "none";
+});
+</script>
+
+</script>
+
+
+<title>Калькулятор калорий кешью</title>
+
+<style>
+
+body{
+font-family:Arial;
+background-image:url(fruits.jpg);
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+margin:0;
+}
+
+header{
+background:#2fc31f;
+color:white;
+padding:20px;
+text-align:center;
+font-size:24px;
+}
+
+nav{
+background:#ffffff;
+padding:10px;
+text-align:center;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a{
+margin:10px;
+text-decoration:none;
+color:#2c7be5;
+font-weight:bold;
+}
+
+.container{
+width:400px;
+margin:50px auto;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+</style>
+
+<title>Калькулятор калорий кешью</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    background-color:#f3f6fb;
+}
+
+.container{
+    width:400px;
+    margin:20px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+h1{
+    color:#2c7be5;
+}
+
+input{
+    padding:10px;
+    width:80%;
+    margin:10px;
+    font-size:16px;
+}
+
+button{
+    padding:10px 20px;
+    background:#2c7be5;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1a5dc9;
+}
+
+.result{
+    margin-top:20px;
+    font-size:20px;
+    color:#28a745;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Калькулятор калорий кешью</h1>
+
+<p>Введите вес кешью в граммах</p>
+
+<input type="number" id="weight" placeholder="например 120">
+
+<br>
+
+<button onclick="calculate()">Рассчитать</button>
+
+<div class="result" id="result"></div>
+
+<p style="margin-top:30px;">
+Кешью содержит примерно <b>572 ккал на 100 г</b>.
+</p>
+
+</div>
+
+<script>
+
+function calculate(){
+
+let weight = document.getElementById("weight").value;
+
+let calories = weight * 572 / 100;
+
+document.getElementById("result").innerText =
+"Калории: " + calories.toFixed(1) + " ккал";
+
+}
+
+</script>
+
+<script src="products.js"></script>
+
+<script>
+function searchProducts() {
+  const query = document.getElementById('searchBox').value.toLowerCase();
+  const results = document.getElementById('results');
+
+  results.innerHTML = '';
+
+  if (!query) return;
+
+  const filtered = products.filter(p =>
+    p.name.toLowerCase().includes(query)
+  );
+
+  if (filtered.length === 0) {
+    results.innerHTML = '<li>Ничего не найдено</li>';
+    return;
+  }
+
+  filtered.forEach(p => {
+    const li = document.createElement('li');
+    li.innerHTML = <a href="${p.link}">${p.name}</a>;
+    results.appendChild(li);
+  });
+}
+</script>
+
+</body>
+</html>
