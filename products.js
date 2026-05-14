@@ -19,6 +19,7 @@ const products = [
   {name: "смородина", link: "smorodina.html"},
   {name: "черная смородина", link: "bksmorodina.html"},
   {name: "виноград", link: "grape.html"},
+  {name: "карамболь", link: "karambol.html"},
   {name: "вишня", link: "cherry.html"},
   {name: "ананас", link: "ananas.html"},
   {name: "черешня", link: "cheresna.html"},
