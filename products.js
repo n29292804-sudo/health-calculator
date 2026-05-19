@@ -45,6 +45,7 @@ const products = [
   {name: "изюм", link: "izum.html"},
   {name: "мед", link: "med.html"},
   {name: "молоко", link: "milk.html"},
+  {name: "сливки 10%", link: "slivki.html"},
   {name: "сметана", link: "smetana.html"},
   {name: "кефир", link: "kefir.html"},
   {name: "йогурт", link: "yogurt.html"},
