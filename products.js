@@ -9,6 +9,7 @@ const products = [
   {name: "персик", link: "peach.html"},
   {name: "дыня", link: "melon.html"},
   {name: "арбуз", link: "watermelon.html"},
+  {name: "хурма", link: "hurma.html"},
   {name: "мандарин", link: "mandarin.html"},
   {name: "лимон", link: "lemon.html"},
   {name: "шампиньоны", link: "shampinony.html"},
